@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mbtec.staffnoc.controller.TelaPrincipalController">
+   <top>
+      <MenuBar prefHeight="33.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="NOCSTAFF">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sobre" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu disable="true" mnemonicParsing="false" text="Diario do Tecnico" />
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableviewNocstaff" layoutX="13.0" layoutY="178.0" prefHeight="482.0" prefWidth="1273.0" style="-fx-border-color: Lime;">
+              <columns>
+                <TableColumn fx:id="colunaCodigoAct" prefWidth="75.0" text="Codigo" />
+                  <TableColumn fx:id="colunaActividadeAct" prefWidth="458.0" text="Atividade" />
+                <TableColumn fx:id="colunaBTSAct" prefWidth="205.0" text="BTS" />
+                  <TableColumn fx:id="colunacurrentymonth" minWidth="0.0" prefWidth="167.0" text="Mes" />
+                  <TableColumn fx:id="colunaDoneAct" minWidth="0.0" prefWidth="151.0" text="Feito" />
+                  <TableColumn fx:id="colunaDateDoneAct" minWidth="0.0" prefWidth="166.0" text="Data Feita" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text layoutX="150.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff:" wrappingWidth="147.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="lbStaffAct" layoutX="170.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.13671875" />
+            <JFXButton fx:id="btnDone" layoutX="842.0" layoutY="121.0" onAction="#btnDone" style="-fx-border-color: yellow;" text="Done">
+               <effect>
+                  <Glow level="0.28">
+                     <input>
+                        <Bloom />
+                     </input>
+                  </Glow>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="790.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score:" wrappingWidth="147.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="830.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00.0%" wrappingWidth="67.13671875" />
+            <JFXButton fx:id="btnUndone" layoutX="961.0" layoutY="121.0" onAction="#btnUndone" style="-fx-border-color: yellow;" text="Undone">
+               <effect>
+                  <Glow level="0.28">
+                     <input>
+                        <Bloom />
+                     </input>
+                  </Glow>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="375.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cell:" wrappingWidth="147.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="150.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colaborator:" wrappingWidth="147.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="lbPhoneStaffAct" layoutX="397.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.13671875" />
+            <Text fx:id="lbCollab" layoutX="174.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.13671875" />
+            <Text layoutX="375.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cell:" wrappingWidth="147.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="lbPhoneCollab" layoutX="397.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.13671875" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

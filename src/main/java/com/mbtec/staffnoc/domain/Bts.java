@@ -6,21 +6,31 @@ public class Bts {
     private String street;
     private String gen;
     private String meter_edm;
+    private boolean solar;
     private Technical_Staff technical_staff;
     private Colaborator collab;
 
     public Bts(int idbts, String site_code, String street,
-               String gen, String meter_edm, Technical_Staff technical_staff, Colaborator collab) {
+               String gen, String meter_edm, boolean solar, Technical_Staff technical_staff, Colaborator collab) {
         this.idbts = idbts;
         this.site_code = site_code;
         this.street = street;
         this.gen = gen;
         this.meter_edm = meter_edm;
+        this.solar = solar;
         this.technical_staff = technical_staff;
         this.collab = collab;
     }
 
     public Bts() {
+    }
+
+    public boolean isSolar() {
+        return solar;
+    }
+
+    public void setSolar(boolean solar) {
+        this.solar = solar;
     }
 
     public int getIdbts() {
